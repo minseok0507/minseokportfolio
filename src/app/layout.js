@@ -7,10 +7,9 @@ export const metadata = {
 
 export default function RootLayout({children}) {
     return (
-        <html lang="ko">
+        <html lang="ko" className="bg-white">
         <body
         >
-        <link rel="icon" href="/favicon.ico" sizes="any"/>
         {children}
         </body>
         </html>
