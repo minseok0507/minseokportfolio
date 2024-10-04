@@ -19,9 +19,11 @@ export default function DarkModeToggle() {
         if (isdark) {
             document.documentElement.classList.add('dark');
             document.documentElement.classList.add('bg-gray-800');
+            document.documentElement.classList.remove('bg-white');
         } else {
             document.documentElement.classList.remove('dark');
             document.documentElement.classList.remove('bg-gray-800');
+            document.documentElement.classList.add('bg-white');
         }
     }, [isdark]);
 

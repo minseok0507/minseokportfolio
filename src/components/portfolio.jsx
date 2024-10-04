@@ -10,7 +10,7 @@ import DarkModeToggle from "@/components/dark-mode-toggle";
 export function PortfolioComponent() {
     return (
         (<div
-            className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
+            className="min-h-screen bg-gradient-to-b from-gray-200 to-white dark:from-gray-900 dark:to-gray-800">
             <header className="bg-white dark:bg-gray-800 shadow">
                 <div
                     className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
