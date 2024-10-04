@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import minseokPhoto from "@/image/minseok.jpg"
 
 export function PortfolioComponent() {
   return (
@@ -36,6 +37,7 @@ export function PortfolioComponent() {
           <p className="text-gray-600 dark:text-gray-300">
             I'm a passionate full-stack web developer with 5 years of experience in creating robust and scalable web applications. 
             I love turning complex problems into simple, beautiful, and intuitive designs.
+            <img src={minseokPhoto} alt="" width={30}/>
           </p>
         </section>
 
