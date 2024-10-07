@@ -40,7 +40,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "#",
         pjTerm: "2019.11~2020.01",
-        thumbnail: "#",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
     },
     {
         title: "미니 프로젝트 캘린더",
@@ -49,7 +49,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "#",
         pjTerm: "2024.05.03~2024.05.07",
-        thumbnail: "#",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
         pdf: "#",
     },
     {
@@ -57,9 +57,9 @@ const projects = [
         description: "세미 프로젝트를 시작하기에 앞서, 깃과 깃허브를 연습하기 위해 2인 팀으로 프로젝트를 진행합니다. 일주일 안에 완성할 수 있는 주제로 블로그 프로젝트를 선택했습니다.",
         technologies: ["JSP", "Spring", "MyBatis", "Tailwind CSS", "Jenkins"],
         liveDemoLink: "#",
-        githubLink: "#",
+        githubLink: "https://github.com/gratisreise/teamprojecttest",
         pjTerm: "2024.05.31~2024.06.04",
-        thumbnail: "#",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
         pdf: "#",
     },
     {
@@ -69,7 +69,8 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "https://github.com/minseok0507/PandaProject",
         pjTerm: "2024.06.04~2024.07.02",
-        thumbnail: "#",
+        thumbnail: "",
+
         infoVideo: "https://www.youtube.com/watch?v=jMFjW18qeZ4",
         pdf: "#",
     },
@@ -80,7 +81,8 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "#",
         pjTerm: "2024.07.15~2024.09.20",
-        thumbnail: "#",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/game.png",
+
         infoVideo: "https://www.youtube.com/watch?v=jxF3JOLMpdw",
         pdf: "#",
     },
@@ -89,8 +91,9 @@ const projects = [
         description: "A conversational chatbot application built with React, Node.js, and a machine learning model.",
         technologies: ["Next.js", "Docker"],
         liveDemoLink: "#",
-        githubLink: "#",
+        githubLink: "https://github.com/minseok0507/minseokportfolio",
         pjTerm: "2024.03~2024.07",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
     },
 ];
 
