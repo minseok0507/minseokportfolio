@@ -40,7 +40,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "#",
         pjTerm: "2019.11~2020.01",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2019portfolio.png",
     },
     {
         title: "미니 프로젝트 캘린더",
@@ -49,7 +49,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "#",
         pjTerm: "2024.05.03~2024.05.07",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/parsoner.png",
         pdf: "#",
     },
     {
@@ -59,7 +59,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "https://github.com/gratisreise/teamprojecttest",
         pjTerm: "2024.05.31~2024.06.04",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/team.png",
         pdf: "#",
     },
     {
@@ -69,7 +69,7 @@ const projects = [
         liveDemoLink: "#",
         githubLink: "https://github.com/minseok0507/PandaProject",
         pjTerm: "2024.06.04~2024.07.02",
-        thumbnail: "",
+        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/panda.png",
 
         infoVideo: "https://www.youtube.com/watch?v=jMFjW18qeZ4",
         pdf: "#",
@@ -79,7 +79,7 @@ const projects = [
         description: "조선의 팔도를 테마로 한 모노폴리와 윷놀이를 결합한 보드게임입니다.",
         technologies: ["Next.js", "Spring", "JPA", "Tailwind CSS", "Node.js", "WebSocket", "NCP", "Docker"],
         liveDemoLink: "#",
-        githubLink: "#",
+        githubLink: "https://github.com/Joseonpaldo",
         pjTerm: "2024.07.15~2024.09.20",
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/game.png",
 
@@ -89,10 +89,10 @@ const projects = [
     {
         title: "2024 포트폴리오",
         description: "A conversational chatbot application built with React, Node.js, and a machine learning model.",
-        technologies: ["Next.js", "Docker"],
+        technologies: ["Next.js", "Tailwind CSS", "Docker"],
         liveDemoLink: "#",
         githubLink: "https://github.com/minseok0507/minseokportfolio",
-        pjTerm: "2024.03~2024.07",
+        pjTerm: "2024.10.03~",
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
     },
 ];
@@ -102,11 +102,11 @@ function ProjectCard({project}) {
         <Card>
             <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
-                {/*<CardDescription>{project.description}</CardDescription>*/}
             </CardHeader>
-            <div className="flex px-6 pb-6 w-full h-52 justify-center">
-                <img src={project.thumbnail} alt=""/>
+            <div className="flex w-full h-52 justify-center">
+                <img src={project.thumbnail} alt="" height="100%"/>
             </div>
+            <CardDescription className="px-4 py-2">{project.description}</CardDescription>
             <CardContent>
                 <div className="flex-wrap flex gap-x-4 text-sm text-muted-foreground">
                     {project.technologies.map((tech, index) => (
@@ -166,6 +166,7 @@ function LinkButton({href, className, label}) {
             href={href}
             className={`inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium shadow transition-colors ${className} hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
             prefetch={false}
+            target="_blank"
         >
             {label}
         </Link>
