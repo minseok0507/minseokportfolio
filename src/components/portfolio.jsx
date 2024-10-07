@@ -1,22 +1,54 @@
 'use client'
 
 import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {Github, Linkedin, Mail, Twitter} from "lucide-react"
+import {Github, Mail} from "lucide-react"
 
 import SwiperComponent from "@/components/SwiperComponent";
-import DarkModeToggle from "@/components/dark-mode-toggle";
 import {CoolNavBarJsx} from "@/components/cool-nav-bar";
-import MyprojectComponent from "@/components/myproject-component";
+import MyProjectComponent from "@/components/my-project-component";
 import Introduction from "@/components/introduction";
+import {useEffect, useRef, useState} from "react";
+import FixedMenu from "@/components/fixed-menu";
 
 export function PortfolioComponent() {
+    console.log("PortfolioComponent");
+
+    const headerRef = useRef(null);
+    const [fixedMenu, setFixedMenu] = useState(0);
+    const [fixedMenuDisplay, setFixedMenuDisplay] = useState("none");
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setFixedMenu(0)
+                    setTimeout(() => setFixedMenuDisplay("none"), 300)
+                } else {
+                    setFixedMenuDisplay("grid")
+                    setTimeout(() => setFixedMenu(1), 300)
+                }
+            });
+        });
+
+        if (headerRef.current) {
+            observer.observe(headerRef.current);
+        }
+
+        // 컴포넌트 언마운트 시 observer 해제
+        return () => {
+            if (headerRef.current) {
+                observer.unobserve(headerRef.current);
+            }
+        };
+    }, []);
     return (
         (<div
             className="min-h-screen bg-gradient-to-b from-gray-200 to-white dark:from-gray-900 dark:to-gray-800">
-            <header className="bg-white dark:bg-gray-800 shadow">
+            <header id="home" className="bg-white dark:bg-gray-800 shadow" ref={headerRef}>
                 <CoolNavBarJsx/>
             </header>
+            <FixedMenu style={{opacity: fixedMenu, transition: '0.3s linear', display: fixedMenuDisplay}}/>
             <main className="max-w-7xl mx-auto p-6 sm:px-6 lg:px-8">
                 <Introduction/>
                 <section id="about" className="mb-12">
@@ -91,7 +123,7 @@ export function PortfolioComponent() {
                     {/*        </Card>*/}
                     {/*    ))}*/}
                     {/*</div>*/}
-                    <MyprojectComponent/>
+                    <MyProjectComponent/>
                 </section>
 
                 <section id="contact" className="mb-12">
@@ -114,7 +146,7 @@ export function PortfolioComponent() {
                     </div>
                 </section>
             </main>
-            <footer className="bg-white dark:bg-gray-800 shadow">
+            <footer className="bg-white dark:bg-gray-800">
                 <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
                     <p className="text-center text-gray-500 dark:text-gray-400">© 2024 Minseok Jeong. All rights
                         reserved.</p>

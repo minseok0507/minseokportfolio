@@ -14,10 +14,10 @@ export function CoolNavBarJsx() {
   }
 
   return (
-    (<nav className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    (<nav className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <DarkModeToggle/>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Minseok Jeong</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white"></h1>
           <div className="hidden md:flex space-x-4">
             <NavItem href="#">Home</NavItem>
             <NavItem href="#about">About</NavItem>

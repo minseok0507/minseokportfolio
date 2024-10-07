@@ -4,8 +4,8 @@ import 'swiper/css';
 import {Card, CardHeader, CardTitle} from "@/components/ui/card";
 import {
     siCss3,
-    siDocker, siHtml5,
-    siJavascript, siLinux,
+    siDocker, siGithub, siHtml5,
+    siJavascript, siJenkins, siLinux,
     siMysql,
     siNaver,
     siNextdotjs,
@@ -56,6 +56,8 @@ const SwiperComponent = () => {
         {skill: "NCP", icon: siNaver},
         {skill: "Docker", icon: siDocker},
         {skill: "Linux", icon: siLinux},
+        {skill: "Jenkins", icon: siJenkins},
+        {skill: "Github", icon: siGithub},
 
     ];
 
@@ -93,8 +95,8 @@ const SwiperComponent = () => {
             modules={[Autoplay]}
         >
             {skills.map((skill) => (
-                <SwiperSlide key={skill.skill}>
-                    <Card style={{ backgroundColor: darkenColor(`#${skill.icon.hex}`, 10) }}>
+                <SwiperSlide key={skill?.skill}>
+                    <Card style={{ backgroundColor: darkenColor(`#${skill?.icon.hex}`, 10) }}>
                     <CardHeader>
                             <CardTitle
                                 className="text-white flex items-center justify-center"
@@ -115,10 +117,10 @@ const SwiperComponent = () => {
                                             <feDropShadow dx="1" dy="1" stdDeviation="1" floodColor="#0000004f"/>
                                         </filter>
                                     </defs>
-                                    <path d={skill.icon.path} filter="url(#shadow2)"/>
+                                    <path d={skill?.icon.path} filter="url(#shadow2)"/>
                                 </svg>
 
-                                {skill.skill}
+                                {skill?.skill}
                             </CardTitle>
                     </CardHeader>
                     </Card>

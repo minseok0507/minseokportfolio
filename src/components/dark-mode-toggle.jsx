@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 export default function DarkModeToggle() {
-    const [isdark, setIsdark] = useState(null);
+    const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
-        const storedIsDark = JSON.parse(localStorage.getItem('isdark'));
-        setIsdark(storedIsDark);
+        const storedIsDark = JSON.parse(localStorage.getItem('isDark'));
+        console.log(storedIsDark);
         if (storedIsDark === null) {
-            setIsdark(false);
+            setIsDark(false);
+            return;
         }
+        setIsDark(storedIsDark);
     }, []);
 
     useEffect(() => {
-        if (isdark === null){
-            return;
-        }
-        localStorage.setItem('isdark', JSON.stringify(isdark));
-        if (isdark) {
+        if (isDark) {
             document.documentElement.classList.add('dark');
             document.documentElement.classList.add('bg-gray-800');
             document.documentElement.classList.remove('bg-white');
@@ -25,7 +23,8 @@ export default function DarkModeToggle() {
             document.documentElement.classList.remove('bg-gray-800');
             document.documentElement.classList.add('bg-white');
         }
-    }, [isdark]);
+        localStorage.setItem('isDark', JSON.stringify(isDark));
+    }, [isDark]);
 
     return (
         <>
@@ -33,8 +32,8 @@ export default function DarkModeToggle() {
                 <input
                     type="checkbox"
                     className="theme-controller"
-                    checked={isdark}
-                    onChange={() => setIsdark(!isdark)}
+                    checked={isDark}
+                    onChange={() => setIsDark(!isDark)}
                 />
 
                 {/* sun icon */}
