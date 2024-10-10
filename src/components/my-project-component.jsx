@@ -67,7 +67,7 @@ const projects = [
         description: "중고물품을 목적지를 확인한 후, 채팅을 통해 거래 할 수 있는 중고거래 플렛폼입니다.",
         technologies: ["JSP", "Spring", "MyBatis", "Tailwind CSS", "WebSocket", "Jenkins"],
         liveDemoLink: "#",
-        githubLink: "https://github.com/minseok0507/PandaProject",
+        githubLink: "https://github.com/minseok0507/semi-project-panda",
         pjTerm: "2024.06.04~2024.07.02",
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/panda.png",
 
