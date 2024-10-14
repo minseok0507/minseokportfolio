@@ -9,6 +9,8 @@ import MyProjectComponent from "@/components/my-project-component";
 import Introduction from "@/components/introduction";
 import {useEffect, useRef, useState} from "react";
 import FixedMenu from "@/components/fixed-menu";
+import PdfViewer from "@/components/pdf-viewer";
+
 
 export function PortfolioComponent() {
     console.log("PortfolioComponent");
@@ -82,47 +84,6 @@ export function PortfolioComponent() {
 
                 <section id="projects" className="mb-12">
                     <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Projects</h2>
-                    {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">*/}
-                    {/*    {[*/}
-                    {/*        {*/}
-                    {/*            title: "2019년 포트폴리오",*/}
-                    {/*            description: "HTML CSS JavaScript Jquery",*/}
-                    {/*            link: "#"*/}
-                    {/*        },*/}
-                    {/*        {*/}
-                    {/*            title: "개인 프로젝트 캘린더",*/}
-                    {/*            description: "JSP",*/}
-                    {/*            link: "#"*/}
-                    {/*        },*/}
-                    {/*        {*/}
-                    {/*            title: "2인 프로젝트 블로그",*/}
-                    {/*            description: "HTML CSS JavaScript Jquery",*/}
-                    {/*            link: "#"*/}
-                    {/*        },*/}
-                    {/*        {*/}
-                    {/*            title: "프로젝트 판다",*/}
-                    {/*            description: "스프링 프레임워크 JSP myBatis",*/}
-                    {/*            link: "#"*/}
-                    {/*        },*/}
-                    {/*        {*/}
-                    {/*            title: "조선팔도 보드게임",*/}
-                    {/*            description: "NextJs Spring boot websocket",*/}
-                    {/*            link: "#"*/}
-                    {/*        }*/}
-                    {/*    ].map((project, index) => (*/}
-                    {/*        <Card key={index}>*/}
-                    {/*            <CardHeader>*/}
-                    {/*                <CardTitle>{project.title}</CardTitle>*/}
-                    {/*                <CardDescription>{project.description}</CardDescription>*/}
-                    {/*            </CardHeader>*/}
-                    {/*            <CardContent>*/}
-                    {/*                <Button asChild>*/}
-                    {/*                    <a href={project.link}>View Project</a>*/}
-                    {/*                </Button>*/}
-                    {/*            </CardContent>*/}
-                    {/*        </Card>*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
                     <MyProjectComponent/>
                 </section>
 
@@ -145,6 +106,8 @@ export function PortfolioComponent() {
                         </Button>
                     </div>
                 </section>
+
+                <PdfViewer />
             </main>
             <footer className="bg-white dark:bg-gray-800">
                 <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
