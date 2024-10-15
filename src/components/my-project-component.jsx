@@ -19,11 +19,12 @@ import {
     WindIcon,
     Youtube
 } from "lucide-react";
+import {useRef} from "react";
 
 export default function MyProjectComponent() {
     return (
         <div className="flex flex-col items-center justify-center text-center">
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-4 lg:grid-cols-2 lg:gap-12">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project}/>
                 ))}
@@ -98,13 +99,46 @@ const projects = [
 ];
 
 function ProjectCard({project}) {
+    const imageCard = useRef(null);
+
+    const imageClickEvent = (pdf, demo) => {
+        let link;
+        if (pdf !== undefined) {
+            link = pdf;
+        } else {
+            link = demo;
+        }
+            window.open(link, "_blank");
+    }
+
+    const imageMouseOverEvent = (e) => {
+        imageCard.current.style.opacity = "1";
+    }
+    const imageMouseOutEvent = (e) => {
+        imageCard.current.style.opacity = "0";
+    }
+
     return (
         <Card>
             <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
             </CardHeader>
             <div className="flex w-full h-52 justify-center">
-                <img src={project.thumbnail} alt="" height="100%"/>
+                <div className="flex w-full justify-center relative"
+                     onMouseOver={imageMouseOverEvent}
+                     onMouseOut={imageMouseOutEvent}
+                >
+                    <div
+                        onClick={() => imageClickEvent(project?.pdf, project?.liveDemoLink)}
+                        ref={imageCard}
+                        className="duration-300 opacity-0 absolute w-full h-full bg-opacity-30 bg-black flex items-center justify-center text-white font-bold">
+                        VIEW PDF
+                    </div>
+                    <img src={project.thumbnail}
+                         alt="project thumbnail"
+                         height="100%"
+                    />
+                </div>
             </div>
             <CardDescription className="px-4 py-2">{project.description}</CardDescription>
             <CardContent>
@@ -118,7 +152,7 @@ function ProjectCard({project}) {
             <CardFooter>
                 <div className="flex gap-2 items-center">
                     <LinkButton href={project.liveDemoLink}
-                                className="bg-gray-800 dark:bg-gray-200 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-500 text-white dark:text-gray-900"
+                                className="bg-gray-800 dark:bg-gray-200 hover:bg-gray-500 hover:text-gray-300 dark:hover:bg-gray-500 text-white dark:text-gray-900"
                                 label="Live Demo"/>
                     <LinkButton href={project.githubLink}
                                 className="border border-input dark:bg-gray-700 hover:text-white dark:hover:text-black dark:hover:bg-gray-400"

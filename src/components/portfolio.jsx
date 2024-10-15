@@ -9,6 +9,7 @@ import MyProjectComponent from "@/components/my-project-component";
 import Introduction from "@/components/introduction";
 import {useEffect, useRef, useState} from "react";
 import FixedMenu from "@/components/fixed-menu";
+import {ContactMeJsx} from "@/components/contact-me";
 
 
 export function PortfolioComponent() {
@@ -52,29 +53,29 @@ export function PortfolioComponent() {
             <FixedMenu style={{opacity: fixedMenu, transition: '0.3s linear', display: fixedMenuDisplay}}/>
             <main className="max-w-7xl mx-auto p-6 sm:px-6 lg:px-8">
                 <Introduction/>
-                <section id="about" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">About Me</h2>
-                    <div className="flex justify-between">
-                        <div>
-                            <ul className="steps steps-vertical md:">
-                                <li className="step step-primary">Register</li>
-                                <li className="step step-primary">Choose plan</li>
-                                <li className="step">Purchase</li>
-                                <li className="step">Receive Product</li>
-                            </ul>
-                        </div>
+                {/*<section id="about" className="mb-12">*/}
+                {/*    <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">My Step</h2>*/}
+                {/*    <div className="flex justify-between">*/}
+                {/*        <div>*/}
+                {/*            <ul className="steps steps-vertical">*/}
+                {/*                <li className="step step-primary">2019 웹퍼블리셔 과정 (웹 디자인 기능사)</li>*/}
+                {/*                <li className="step step-primary">2021 동국대 DUICA 컴퓨터공학 (네트워크 관리사)</li>*/}
+                {/*                <li className="step step-primary">2024 네이버 클라우드 데브옵스 과정 (NCA, NCP)</li>*/}
+                {/*                <li className="step">...</li>*/}
+                {/*            </ul>*/}
+                {/*        </div>*/}
 
-                        <img
-                            className="rounded-xl shadow md:hidden"
-                            src="https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/minseok.jpg"
-                            alt=""
-                            style={{
-                                width: 200,
-                                height: 267
-                            }}
-                        />
-                    </div>
-                </section>
+                {/*        <img*/}
+                {/*            className="rounded-xl shadow md:hidden"*/}
+                {/*            src="https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/minseok.jpg"*/}
+                {/*            alt=""*/}
+                {/*            style={{*/}
+                {/*                width: 200,*/}
+                {/*                height: 267*/}
+                {/*            }}*/}
+                {/*        />*/}
+                {/*    </div>*/}
+                {/*</section>*/}
 
                 <section id="skills" className="mb-12">
                     <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Skills</h2>
@@ -87,22 +88,8 @@ export function PortfolioComponent() {
                 </section>
 
                 <section id="contact" className="mb-12">
-                    <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Contact Me</h2>
-                    <div className="flex space-x-4">
-                        <Button variant="outline" size="icon">
-                            <a href="mailto:jms8928@naver.com" aria-label="Email">
-                                <Mail className="h-4 w-4"/>
-                            </a>
-                        </Button>
-                        <Button variant="outline" size="icon">
-                            <a
-                                href="https://github.com/minseok0507/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub">
-                                <Github className="h-4 w-4"/>
-                            </a>
-                        </Button>
+                    <div className="flex space-x-4 my-56">
+                        <ContactMeJsx/>
                     </div>
                 </section>
 

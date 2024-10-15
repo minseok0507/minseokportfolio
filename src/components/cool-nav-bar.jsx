@@ -20,9 +20,9 @@ export function CoolNavBarJsx() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white"></h1>
           <div className="hidden md:flex space-x-4">
             <NavItem href="#">Home</NavItem>
-            <NavItem href="#about">About</NavItem>
             <NavItem href="#skills">Skills</NavItem>
             <NavItem href="#projects">Projects</NavItem>
+            <NavItem href="#contact">Contact</NavItem>
           </div>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-black dark:text-white focus:outline-none">
@@ -34,9 +34,9 @@ export function CoolNavBarJsx() {
         <div className="md:hidden mt-5">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <MobileNavItem href="#">Home</MobileNavItem>
-            <MobileNavItem href="#about">About</MobileNavItem>
             <MobileNavItem href="#skills">Skills</MobileNavItem>
             <MobileNavItem href="#projects">Projects</MobileNavItem>
+            <MobileNavItem href="#contact">Contact</MobileNavItem>
           </div>
         </div>
       )}
