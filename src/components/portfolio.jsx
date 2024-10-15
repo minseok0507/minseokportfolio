@@ -9,7 +9,6 @@ import MyProjectComponent from "@/components/my-project-component";
 import Introduction from "@/components/introduction";
 import {useEffect, useRef, useState} from "react";
 import FixedMenu from "@/components/fixed-menu";
-import PdfViewer from "@/components/pdf-viewer";
 
 
 export function PortfolioComponent() {
@@ -107,7 +106,6 @@ export function PortfolioComponent() {
                     </div>
                 </section>
 
-                <PdfViewer />
             </main>
             <footer className="bg-white dark:bg-gray-800">
                 <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
