@@ -9,7 +9,7 @@ import {
     siMysql,
     siNaver,
     siNextdotjs, siNginx,
-    siNodedotjs,
+    siNodedotjs, siPortainer,
     siReact,
     siSocketdotio,
     siSpring
@@ -60,6 +60,8 @@ const SwiperComponent = () => {
         {skill: "Github", icon: siGithub},
         {skill: "Nginx", icon: siNginx},
         {skill: "minIO", icon: siMinio},
+        {skill: "Portainer", icon: siPortainer},
+
     ];
 
     const hexToRgb = (hex) => {
