@@ -51,7 +51,7 @@ const projects = [
         githubLink: "https://github.com/minseok0507/personal-calendar",
         pjTerm: "2024.05.03~2024.05.07",
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/parsoner.png",
-        pdf: "http://minseok.site:9999/portfolio-pdf/mini-project-calendar.pdf",
+        pdf: "https://minio.minseok.site/portfolio-pdf/mini-project-calendar.pdf",
     },
     {
         title: "2인 프로젝트 블로그",
@@ -61,7 +61,7 @@ const projects = [
         githubLink: "https://github.com/minseok0507/twin-project-blog",
         pjTerm: "2024.05.31~2024.06.04",
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/team.png",
-        pdf: "http://minseok.site:9999/portfolio-pdf/twin-project-blog.pdf",
+        pdf: "https://minio.minseok.site/portfolio-pdf/twin-project-blog.pdf",
     },
     {
         title: "세미 프로젝트 판다",
@@ -73,7 +73,7 @@ const projects = [
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/panda.png",
 
         infoVideo: "https://www.youtube.com/watch?v=jMFjW18qeZ4",
-        pdf: "http://minseok.site:9999/portfolio-pdf/semi-project-panda.pdf",
+        pdf: "https://minio.minseok.site/portfolio-pdf/semi-project-panda.pdf",
     },
     {
         title: "조선팔도 보드게임",
@@ -85,7 +85,7 @@ const projects = [
         thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/game.png",
 
         infoVideo: "https://www.youtube.com/watch?v=jxF3JOLMpdw",
-        pdf: "http://minseok.site:9999/portfolio-pdf/final-project-game.pdf",
+        pdf: "https://minio.minseok.site/portfolio-pdf/final-project-game.pdf",
     },
     {
         title: "2024 포트폴리오",

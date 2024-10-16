@@ -5,10 +5,10 @@ import {Card, CardHeader, CardTitle} from "@/components/ui/card";
 import {
     siCss3,
     siDocker, siGithub, siHtml5,
-    siJavascript, siJenkins, siLinux,
+    siJavascript, siJenkins, siLinux, siMinio,
     siMysql,
     siNaver,
-    siNextdotjs,
+    siNextdotjs, siNginx,
     siNodedotjs,
     siReact,
     siSocketdotio,
@@ -58,7 +58,8 @@ const SwiperComponent = () => {
         {skill: "Linux", icon: siLinux},
         {skill: "Jenkins", icon: siJenkins},
         {skill: "Github", icon: siGithub},
-
+        {skill: "Nginx", icon: siNginx},
+        {skill: "minIO", icon: siMinio},
     ];
 
     const hexToRgb = (hex) => {
