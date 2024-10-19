@@ -24,7 +24,7 @@ import {useRef} from "react";
 export default function MyProjectComponent() {
     return (
         <div className="flex flex-col items-center justify-center text-center">
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-4 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-4 md:grid-cols-2 md:gap-12">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project}/>
                 ))}
@@ -41,7 +41,7 @@ const projects = [
         liveDemoLink: "https://portfolio.minseok.site/",
         githubLink: "#",
         pjTerm: "2019.11~2020.01",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2019portfolio.png",
+        thumbnail: "/image/2019portfolio.png",
     },
     {
         title: "미니 프로젝트 캘린더",
@@ -50,7 +50,7 @@ const projects = [
         liveDemoLink: "https://calendar.minseok.site/",
         githubLink: "https://github.com/minseok0507/personal-calendar",
         pjTerm: "2024.05.03~2024.05.07",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/parsoner.png",
+        thumbnail: "/image/parsoner.png",
         pdf: "https://minio.minseok.site/portfolio-pdf/mini-project-calendar.pdf",
     },
     {
@@ -60,7 +60,7 @@ const projects = [
         liveDemoLink: "https://blog.minseok.site/",
         githubLink: "https://github.com/minseok0507/twin-project-blog",
         pjTerm: "2024.05.31~2024.06.04",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/team.png",
+        thumbnail: "/image/team.png",
         pdf: "https://minio.minseok.site/portfolio-pdf/twin-project-blog.pdf",
     },
     {
@@ -70,7 +70,7 @@ const projects = [
         liveDemoLink: "https://panda.minseok.site/",
         githubLink: "https://github.com/minseok0507/semi-project-panda",
         pjTerm: "2024.06.04~2024.07.02",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/panda.png",
+        thumbnail: "/image/panda.png",
 
         infoVideo: "https://www.youtube.com/watch?v=jMFjW18qeZ4",
         pdf: "https://minio.minseok.site/portfolio-pdf/semi-project-panda.pdf",
@@ -79,22 +79,22 @@ const projects = [
         title: "조선팔도 보드게임",
         description: "조선의 팔도를 테마로 한 모노폴리와 윷놀이를 결합한 보드게임입니다.",
         technologies: ["Next.js", "Spring", "JPA", "Tailwind CSS", "Node.js", "WebSocket", "NCP", "Docker"],
-        liveDemoLink: "#",
+        liveDemoLink: "https://joseonpaldo.site/",
         githubLink: "https://github.com/Joseonpaldo",
         pjTerm: "2024.07.15~2024.09.20",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/game.png",
+        thumbnail: "/image/game.png",
 
         infoVideo: "https://www.youtube.com/watch?v=jxF3JOLMpdw",
         pdf: "https://minio.minseok.site/portfolio-pdf/final-project-game.pdf",
     },
     {
         title: "2024 포트폴리오",
-        description: "A conversational chatbot application built with React, Node.js, and a machine learning model.",
+        description: "현재까지 작업한 산출물을 배포해보고 정리해보았습니다.",
         technologies: ["Next.js", "Tailwind CSS", "Docker"],
         liveDemoLink: "#",
         githubLink: "https://github.com/minseok0507/minseokportfolio",
-        pjTerm: "2024.10.03~",
-        thumbnail: "https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/2024portfolio.png",
+        pjTerm: "2024.10.03~2024.10.19",
+        thumbnail: "/image/2024portfolio.png",
     },
 ];
 
