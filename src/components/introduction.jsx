@@ -18,7 +18,7 @@ const Introduction = () => {
                     </div>
                     <img
                         className="rounded-xl shadow"
-                        src="https://raw.githubusercontent.com/minseok0507/minseokportfolio/refs/heads/main/src/image/minseok.jpg"
+                        src="/image/minseok.jpg"
                         alt=""
                         style={{
                             width: 200 * 1.3,
